@@ -1,4 +1,4 @@
 #!/bin/sh
  
 TEXT="$1"
-echo $TEXT | openssl enc -base64 -e -aes-256-cbc -nosalt -md sha512
+echo "$TEXT" | openssl aes-256-cbc -a -salt -out secrets.txt.enc
